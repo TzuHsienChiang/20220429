@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Jquery-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+     <script src="https://code.jquery.com/jquery-3.6.0.js"
+     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+     crossorigin="anonymous"></script>
+
+    <!--BS CSS CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!--BS JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!--BS icon CDN-->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"/>
+    <!--remix icon CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!--breakPoint CSS by myself-->
+    <link href="/myRwd/myRWD2_breakPoint.css" rel="stylesheet"> 
+    <!--JS by myself-->
+    <script src="/myRwd/myRWD2.js"></script>
+    <script src="/myRwd/myRWD2withLoginForm.js"></script>
+
+     <!--Swiper.js css/js CDN-->
+     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+ 
+     <title>myRWD2withLoginForm</title>
+     <script src="jquery-3.6.0.min.js"></script>
+ 
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&family=Roboto+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    
+    <!--owl-carousel cdn-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+   
+
+    <!--owl-carousel cdn-->
+    <!-- <link href="/owl/CSS/owl.carousel.min.css" rel="styleSheet">
+    <link href="/owl/CSS/owl.theme.default.min.css" rel="styleSheet">
+    <script src="/owl/JS/owl.carousel.min.js"></script>  -->
+
+   
+
+    <style>
+
+        :root{
+            --header-height: 3.5rem; /*56px*/
+        
+        --hue:152;
+        
+  
+
+        --mb-0-5: .5rem ;
+        --mb-0-75: .75rem;
+        --mb-1: 1rem;
+        --mb-1-5: 1.5rem;
+        --mb-2: 2rem;
+        --mb-2-5: 2.5rem ;
+
+        --z-tooltip: 10;
+        --z-fixed: 100;
+        }
+
+        /*responsive typography*/
+        @media screen and (min-width: 968px){
+            :root{
+                --big-font-size: 3.5rem;
+                --hi-font-size: 2.25rem;
+                --h2-font-size: 1.5rem;
+                --h3-font-size:1.25rem;
+                --normal-font-size: 1rem;
+                --small-sont-size: .875rem;
+                --smaller-font-size: .813rem;
+            }
+        }
+
+        /*===========base==========*/
+
+        *{
+            box-sizing: border-box;
+            padding:0;
+            margin:0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body,
+        button,
+        input,
+        textarea{
+            font-family: var(--body-font);
+            font-size: var(--normal-font-size);
+        }
+
+        body{
+            margin: var(--header-height) 0 0 0;
+            background-color:  var(--body-color);
+            color: var(--text-color);
+
+        }
+        button{
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        h1,h2,h3{
+            color: var(--title-color);
+            font-weight: var(--font-semi-bold);
+        }
+
+        ul{
+            list-style: none; /*把li前面的點拿掉*/
+        }
+        a{
+            text-decoration: none;
+        }
+        img{
+            max-width: 100%;
+            height:auto
+        }
+        /*===========reusable CSS classes==========*/
+        .section{
+            padding: 5.5rem 0 1rem;
+        }
+
+        .section_title,
+        .section_title-center{
+            font-size:  var(--h2-font-size);
+            margin-bottom:  var(--mb-2);
+            line-height: 140%;
+        }
+        
+        .section_title-center{
+            text-align: center;
+
+        }
+
+        .container{
+            max-width: 960px;
+            margin-left: var(--mb-1-5);
+            margin-right: var(--mb-1-5);
+        }
+        .grid{
+            display: grid;
+        }
+        .main{
+            overflow: hidden; /*for animation*/
+        }
+        /*===========section1: welcomePage==========*/
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'poppins',sans-serif;
+        }
+        .sec1{
+            position: relative;
+            width:100%;
+            min-height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(187, 148, 161);
+            transition: 0.5s;
+        }
+        .header1{
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding:20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .header1 .myLogo{
+            position: relative;
+            max-width: 80px;
+        }
+        .sec1Ul{ /*header1 ul*/
+            position: relative;
+            display: flex;
+        }
+        header ul li{
+            list-style: none;
+        }
+        header ul li a{
+            display: inline-block;
+            color: beige;
+            font-weight: 400;
+            margin-left: 40px;
+            text-decoration: none;
+        }
+
+        header ul li a:hover{
+            color:#E6BA95;
+        }
+        .sec1Content{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sec1Content .sec1textBox{
+            position: relative;
+            max-width: 600px;
+            color: rgb(255, 209, 123);
+            font-family: 'Noto Serif TC', serif;
+        }
+    
+        .sec1Content .sec1textBox h2{ /*第一行字體*/
+            color: #FFB7A9;
+            font-size: 4em;
+            line-height: 1.5em;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-family: 'Inconsolata', monospace;
+
+            
+        }
+    
+        .sec1Content .sec1textBox h2 span{
+            color: rgb(255, 209, 123);
+            font-size: 2em;
+            font-family: 'Inconsolata', monospace;
+        }
+    
+        .sec1Content .sec1textBox p{
+
+            color: rgb(201, 213, 60);
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+    
+        /* .sec1Content .sec1textBox a{ */
+            /* display: inline-block ;
+            margin-top: 20px;
+            padding: 8px 20px; */
+            /* background-color: bisque; */
+            /* color: rgb(123, 185, 255);
+            border-radius: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-decoration: none;
+            text-transform: capitalize;
+            border: 3px double rgb(123, 185, 255); */
+            /*hover要變顏色和動*/
+        /* } */
+        .sec1Content .sec1imgBox{
+            width: 600px;
+            display: flex;
+            padding-right: 50px;
+            justify-content: flex-end;
+
+        }
+        .sec1Content .sec1imgBox img{
+            max-width: 260px;
+        }
+        .thumb{ /*讓飲料並排*/
+            position: absolute;
+            left:50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            display: flex;
+
+        }
+        .thumb li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .thumb li:hover{
+            transform: translateY(-15px);
+        }
+        .thumb li img{
+            max-width: 40px;
+        }
+        .sci{ /*右邊直向的導覽列*/
+            position: relative;
+            top:200px;
+            /* right:30%; */
+            transform:  translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           
+        }
+        .sci li{
+            list-style: none;
+        }
+        .sci li a{
+            display: inline-block;
+            /* filter: invert(1); */
+            margin: 5px 0;
+            transform: scale(0.6)
+        }
+        .welcomeLink{
+            background-color: #afd6e2;
+            color:rgb(133, 29, 29);
+            width: 80px;
+            height:60px;
+            transition: 0.5s;
+            box-shadow: 0 20px 25px rgb(114, 169, 231);
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgb(192, 192, 235); 
+            text-decoration: none;
+            text-transform: capitalize;
+            letter-spacing: 0.1em;
+            font-size: 0.7em;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            /*display這三行可考慮刪掉*/
+        }
+        .welcomeLink:hover{
+            width: 200px;
+            transition-delay:0.5s;
+        }
+        .welcomeLink::before{
+            content:'';
+            position: absolute;
+            right:25px;
+            width: 12px;
+            height: 12px;
+            /* border-top: 3px solid #fff;  */
+            /* border-right:3px solid #fff ; */
+            /*考慮上面刪掉*/
+
+            transform: rotate(45deg);
+            transition: 0.5s;/*刪掉？*/
+        }
+        .welcomeLink:hover::before{
+            transform: rotate(45deg) translate(50px,-50px);
+        }
+        .welcomeLink::after{
+            content:"";
+            position: absolute;
+            left:-50px;
+            width:12px;
+            height:12px;
+            border-top: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transform: rotate(45deg) translate(-50px,50px);
+            transition: 0.5s;
+        }
+        .welcomeLink:hover::after{
+            transform: rotate(45deg) translate(50px,-50px);
+            transition-delay: 1s;
+        }
+        .welcomeButton{
+            visibility: hidden;
+            opacity: 0;
+            white-space: nowrap;
+            transition: 0.5s;
+            transform:translate(-30px);
+            width: 100px;
+        }
+        .welcomeLink:hover .welcomeButton{
+            visibility: visible;
+            opacity: 1;
+            transition-delay:0.75s;
+            transform: translateX(10px);
+            
+        }
+        .btnLogin{
+            background-color: #E3D9B3;
+            border:2px double #6C6024;
+        }
+        .btnLogin:hover{
+            background-color: #986051;
+            border:2px double #6C6024;
+        }
+        .submitLogin{
+            background-color: #E3D9B3;
+            border:2px double #6C6024;
+        }
+        .submitLogin:hover{
+            background-color: #986051;
+            border:2px double #6C6024;
+        }
+
+        /*===========section2: whyChooseUs or about==========*/
+        .about_container{
+            row-gap:2rem;
+        }
+        .about_img{
+            width: 280px;
+            justify-self: center;
+        }
+        .about_title{
+            margin-bottom: var(--mb-1);
+            font-family: 'Itim', cursive;
+
+        }
+        .about_description{
+            margin-bottom: var(--mb-2);
+            font-family: 'Itim', cursive;
+
+
+        }
+        .about_details{ /*字體顏色*/
+            display: grid;
+            row-gap: 1rem;
+            margin-bottom: var(--mb-2-5);
+            color: #B3A86A;
+
+        }
+        .about_details-descriptions{
+            display: inline-flex;
+            column-gap:.5rem ;
+            font-size: var(--small-font-size);
+        }
+        .about_details{
+        color: #6C6024;
+        transition: box-shadow 1s, background-color 1s,filter 1s;    
+        box-shadow: 5px 5px 20px 5px rgba(205, 201, 201, 0.5);
+        filter: brightness(1.5);
+        }
+
+        .about_details:active{ /*點擊會變色*/
+        opacity: 0.8;
+        background-color: rgba(238, 143, 143, 0.761); 
+        }
+
+
+
+
+        .about_details-icon{
+            font-size: 1rem;
+            color: #FFB7A9;
+            margin-top: .15rem;
+        }
+        /*.button--link{ 這個本來是shopping文字導引連結，但我覺得很普通，所以改成下面的方式
+            color: #DD9080; 
+            font-weight:  var(--font-medium);
+        }
+        .button--link:hover .button_icon{
+            transform: translateX(.6em) translate是transform的變數
+        }*/
+        .blogLink{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(220, 236, 192);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; /*父元素加這個後，下面的blogLink a連結才沒爆版*/
+        margin-right: 20px;/*搭配下面的設定讓每一個blogLink區域的icon分開*/
+        margin-bottom: 20px;
+        border-radius: 6px;
+        overflow: hidden;/*這邊的設定讓每一個blogLink區域的icon分開*/
+        transition: transform 0.5s;
+        }
+        .blogLink:hover{ /*接續上方：transition: transform 0.5s。目的：讓blogLink區域的所有icon當滑鼠移過去時會往上推。*/
+            transform: translateY(-10px);
+        }
+        
+        .blogLink img{ /*blogLink底下的FB icon圖樣*/
+            width: 28px;
+        }
+        .blogLink a{ /*blogLink底下的link icon圖樣*/
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFB7A9;
+            display: flex;
+            justify-content: center;
+            align-items: center;/* justify-content: center;
+            align-items: center 使得link的icon變致中*/
+            opacity: 0; /*目的：滑鼠還沒移過來前是fb圖樣，移過來後變link圖樣*/
+            /*滑鼠還沒移過來前是0，看不見link，移過來後會花0.5秒出現link圖案*/
+            transition: 0.5s ;
+        
+        }
+        .blogLink a:hover{ /*接續 上面.blogLink a{opacity:0;transition:0.5s}*/ /*目的：滑鼠還沒移過來前是fb圖樣，opacity是0，看不見link，移過來後會花0.5秒出現link圖案*/
+            opacity:1; /*一開始狀態是0，未顯示圖案，因為變成1，所以移過來後花0.5秒轉換顯示出link圖樣*/
+        }
+
+        .whyYouShould{ /*whyYouShould圖片*/
+        opacity: 0.8;
+        }
+        .whyYouShould:hover{
+        opacity: 1;
+        transform: scale(1.2);
+        }
+
+
+        /*===========section3:step==========*/
+        .steps_bg{
+            background-color:#ECC9B5;
+            padding: 3rem 2rem 2rem;
+            border-radius: 1rem;
+        }
+        .steps_container{
+            gap: 2rem;
+            padding-top: 1rem;
+        }
+        .steps_title{
+            color: aliceblue;
+        }
+
+        .steps_card{ /*內容方塊、字體的背景顏色*/
+            background-color:#986051;
+            padding: 2.5rem 3rem 2rem 1.5rem;
+            border-radius: 1rem;
+            color:#d1ca9f;
+            font-family: 'Orelega One', cursive;
+
+        }
+        .steps_card-number{
+            display: inline-block ;
+            background-color:#B3A86A;
+            color: aliceblue;
+            padding: .5rem .75rem;
+            border-radius: .25rem;
+            font-size: var(--h2-font-size);
+            margin-bottom: var(--mb-1-5);
+            transition: .3s;
+            
+            
+        }
+
+        .steps_card-title{
+            font-size: var(--h3-font-size);
+            margin-bottom: var(--mb-0-5);
+            
+
+        }
+        .steps_card-description{
+            font-size:  var(--small-font-size);
+            
+        }
+        .steps_card:hover .steps_card-number{
+            transform: translateY(-.65rem);
+        }
+        /*===========section4:products==========*/
+        .product_description{
+            text-align: center;
+        }
+        .product_container{ /*產品區內的產品編排*/
+            padding: 3rem 0 ;
+            grid-template-columns: repeat(2,1fr); /*1fraction（部份）有兩個*/
+            gap: 2.5rem 10rem; /*本來2.5rem 3rem;*/
+        }
+        .product_card{
+            display:grid;
+            position: relative;
+        }
+        .position_img{
+            position: relative;
+            width: 120px;
+            justify-self: center;
+            margin-bottom: var(--mb-0-75);
+            transition: .3s;
+        }
+        .product_title{
+            font-size: 20px;
+            font-weight:bolder;
+            color: rgb(222, 194, 203);
+            background-color: rgb(195, 131, 136);
+            margin-bottom: 1rem;
+            text-align: center;
+            
+        }
+        .product_price{
+            font-size: var(--small-font-size);
+            font-weight: var(--font-semi-bold);
+            color: rgb(235, 177, 193);
+        }
+        .product_button{
+            position: absolute;
+            right:0;
+            bottom: 0;
+            background-color:#fff;
+            width: 25px;
+            padding: .100rem;
+            border-radius: .35rem;
+        }
+        .product_button:hover{
+            background-color:#BB9568;
+        }
+        .product_circle{
+            width: 90px;
+            height: 90px;
+            background-color: antiquewhite;
+            border-radius: 50%;
+            position: absolute;
+            top:18%;
+            left: 5%;
+            /* z-index */
+        }
+        .product_card:hover .product_img{
+            transform: translateY(-.5rem);
+            z-index:1;
+        }
+        .chooseMeText{
+            font-size: 15px;
+            position: absolute;
+            top:18%;
+            right:10%;
+            left: 5%;
+            text-align: center; /*如果是div的內容要置中，就用text-align:center)*/
+            font-family: 'Caveat', cursive;
+        }
+
+        /*===========section5: QUESTIONS==========*/
+        .questions{
+            background-color:#EED1B3;
+        }
+        .questions_container{
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+        }
+        .questions_group{
+            display: grid;
+            row-gap: 1.5rem; 
+        }
+        .questions_item{
+            background-color: #b38376;
+            border-radius: .30rem;
+        }
+        .questions_item-title{ /*問題*/
+            font-size: var(--small-font-size);
+            font-weight: var(--font-medium);
+            color: #f5ceb0;
+
+        }
+        .section_title-center{ /*Some common questions were often asked*/
+        font-family: 'Itim', cursive;
+        font-size: x-large;
+        color: #e6b178;
+        }
+        .section_title-center:hover{ /*Some common questions were often asked*/ /*不知為何改到全部的標題，可能這些被改的都有這個class*/
+        font-family: 'Itim', cursive;
+        font-size: x-large;
+        color: #cfacc0;
+        font-weight: bolder;
+        text-shadow: 0 0 2px #000000;
+    
+        }
+       
+        .questions_icon{ /*+符號*/
+            font-size: 1.25rem;
+            color: #F7C5A0;
+        }
+        .questions_description{
+            font-size: var(--small-font-size);
+            padding: 0 1.25rem 1.25rem 2.5rem;
+        }
+        .questions_header{
+            display: flex;
+            align-items: center;
+            column-gap: .5rem;
+            padding: .75rem .5rem;
+            cursor: pointer;
+        }
+        .questions_content{
+            overflow: hidden;
+            height:0;
+        }
+        .questions_item,
+        .questions_header,
+        .questions_item-title,
+        .questions_icon,
+        .questions_description,
+        .questions_content{
+        transition: .2s;
+        }
+        .questions_item:hover{
+            box-shadow: 0 10px 10px 10px hsla(85, 20.8%, 62.4%, 0.4) ;
+        } /*這邊用到box-shadow: h-shadow v-shadow spread color ;*/
+
+        /*hsla( hue, saturation, lightness, alpha )
+            參數：該函數接受上述和以下所述的四個參數：
+
+            hue:此參數用於定義色輪上的度數。其值介於0到360之間，其中0或360代表紅色，120代表綠色，240代表藍色。
+            saturation:此參數用於定義飽和度，其中0％代表灰色陰影，而100％代表全彩色。
+            lightness:此參數用於定義亮度，其中0％代表黑色，50％代表正常，100％代表白色。
+            alpha:此參數用於定義不透明度，值介於0.0(完全透明)和1.0(完全不透明)之間。
+            ex:hsla(120,60%,70%,0.3)
+
+            box-shadow: h-shadow v-shadow blur spread color inset;
+
+            h-shadow：水平位移距離
+            v-shadow：垂直位移距離
+            blur：模糊半徑
+            spread：擴散距離
+            color：顏色
+            inset：內陰影
+        */
+        /*Rotate icon, change color of titles and background*/
+        .accordion-open .questions__header,
+        .accordion-open .questions__content{
+        background-color: var(--first-color);
+        }
+
+        .accordion-open .questions__item-title,
+        .accordion-open .questions__description,
+        .accordion-open .questions__icon{
+        color: #FFF;
+        }
+
+        .accordion-open .questions__icon{
+        transform: rotate(45deg);
+    }
+
+
+    /*===============section7: CONTACT ===============*/
+        .contact_container{
+        row-gap: 3.5rem;
+        }
+
+        .contact_data{
+        display: grid;
+        row-gap: 2rem;
+        }
+
+        .contact_subtitle{
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-medium);
+        color: rgb(195, 131, 136);
+        margin-bottom: var(--mb-0-5);
+        }
+
+        .contact_description{ /*我的電話和mail*/
+        display: inline-flex;
+        align-items: center;
+        column-gap: .5rem;
+        color:peachpuff;
+        font-weight: var(--font-medium);
+        }
+
+        .contact_icon{
+        font-size: 1.25rem;
+        }
+
+        .contact_inputs{ /*email subject message */
+        display: grid;
+        row-gap: 2rem;
+        margin-bottom: var(--mb-2-5);
+        color: rgb(195, 131, 136);
+    
+        }
+
+        .contact_content{ /*email subject message 輸入欄底部*/
+        position: relative;
+        height: 3rem;
+        border-bottom: 1px solid rgb(125, 120, 120);
+        background-color: rgb(223, 224, 176);
+        }
+
+        .contact_input{ /*輸入的字*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1rem 1rem 1rem 0;
+        background: none;
+
+        color:rgb(182, 188, 143);
+
+        border: none;
+        outline: none;
+        z-index: 1;
+        }
+
+        .contact_label{
+        position: absolute;
+        top: .75rem;
+        width: 100%;
+        font-size: var(--small-font-size);
+        color:rgb(217, 144, 150);
+        transition: .3s;
+        }
+
+        .contact_area{
+        height: 7rem;
+        }
+
+        .contact_area textarea{
+        resize: none;
+        }
+
+        /*Input focus move up label*/
+        .contact_input:focus + .contact_label{
+        top: -.75rem;
+        left: 0;
+        font-size: var(--smaller-font-size);
+        z-index: 10;
+        }
+
+        /*Input focus sticky top label*/
+        .contact_input:not(:placeholder-shown).contact_input:not(:focus) + .contact_label{
+        top: -.75rem;
+        font-size: var(--smaller-font-size);
+        z-index: 10;
+        }
+        .sendMessageButton{
+            width: 30px;
+            background-color: antiquewhite;
+        }
+        .sendMessageButtonArea{
+            background-color:antiquewhite;
+        }
+        .sendMessageButtonArea:hover {
+            transform: translateY(1em);
+        }
+
+/*===============section6: review ===============*/
+.review .slide{
+    padding:2rem;
+    box-shadow:var(--box-shadow);
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    position: relative;    
+}
+
+.review .slide .fa-quote-right{
+    position: absolute;
+    top:2rem; right:2rem;
+    font-size: 6rem;
+    color:#ccc;
+}
+
+.review .slide .user{
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.review .slide .user img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .slide .user h3{
+    color:var(--black);
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+
+.review .slide .user i{
+    font-size: 1.3rem;
+    color:var(--green);
+}
+
+.review .slide p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color:var(--light-color);
+}
+.card-description .card-title h4{ /*標題*/
+    font-family: 'Roboto Slab', serif;
+    color: #986051;
+
+} 
+.card-description .card-text p{ /*內文*/
+    font-family: 'Roboto Slab', serif;
+    color: #a29459;
+
+}
+
+.revImg:hover{
+    cursor: pointer;
+    filter: grayscale(0);
+    transition: filter 2s;
+    
+}
+.revImg:hover{
+       filter: grayscale(1);
+       transform: translateX(10px);
+   }
+/*or*/
+   .revImg:hover{
+    box-shadow:10px 10px 6px #6C6024; 
+}
+
+
+
+
+/*===============section7: FOOTER ===============*/
+        .footer_container{
+        row-gap: 3rem;
+        }
+
+        .footer_logo{
+        display: inline-flex;
+        align-items: center;
+        column-gap: .5rem;
+        color:rgb(166, 166, 207);
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: -1px;
+        margin-bottom: var(--mb-2-5);
+        transition: .3s;
+        }
+
+        .footer_logo-icon{
+        font-size: 1.15rem;
+        color: rgb(166, 166, 207);
+        }
+
+        .footer_logo:hover{
+        color: red;
+        }
+
+        .footer_title{
+        font-size: var(--h3-font-size);
+        margin-bottom: var(--mb-1-5);
+        }
+
+        .footer_subscribe{
+        background-color: rgb(166, 166, 207);
+        padding: .75rem;
+        display: flex;
+        justify-content: space-between;
+        border-radius: .5rem;
+        }
+        .buttonForSubscribe{
+        background-color: rgb(229, 221, 236);
+        }
+
+        .footer_input{
+        width: 70%;
+        padding: 0 .5rem;
+        background: none;
+        color: rgb(182, 188, 143);
+        border: none;
+        outline: none;
+        }
+
+        .footer_button{
+        padding: 1rem;
+        }
+
+        .footer_data{
+        display: grid;
+        row-gap: .75rem;
+        }
+
+        .footer_information{
+        font-size: var(--small-font-size);
+        }
+
+        .footer_social{
+        display: inline-flex;
+        column-gap: .75rem;
+        }
+
+        .footer_social-link{
+        font-size: 1rem;
+        color:rgb(187, 128, 157);
+        transition: .3s;
+        }
+
+        .footer_social-link:hover{
+        transform: translateY(-.25rem);
+        }
+
+        .footer_cards{
+        display: inline-flex;
+        align-items: center;
+        column-gap: .5rem;
+        }
+        .footer_card{
+        width: 35px;
+        }
+
+        .footer_copy{
+        text-align: center;
+        font-size: var(--smaller-font-size);
+        color: rgb(187, 128, 157);
+        margin: 5rem 0 1rem;
+        }
+
+/*=============== SCROLL UP ===============*/
+        .scrollUp{
+        position: fixed;
+        background-color: rgb(199, 80, 120);
+        right: 1rem;
+        bottom: 20%;
+        display: inline-flex;
+        padding: .2rem;
+        border-radius: 30%;
+        z-index: var(--z-tooltip);
+        opacity: .8;
+        transition: .4s;
+        }
+
+        .scrollUp_icon{ /*up箭頭圖案*/
+        /* font-size: 1rem;  這設定只對fonAwesome或remixIcon有用，我插入的是圖片檔，所以要用width*/
+        color: rgb(246, 239, 239);
+        width: 40px;
+        filter: brightness(10);
+        }
+
+        .scrollUp:hover{
+        background-color: royalblue;
+        opacity: 1;
+        }
+
+        /* Show Scroll Up*/
+        .show-scroll{
+        bottom: 3rem;
+        }
+/*=============== SCROLL BAR ===============*/
+        ::-webkit-scrollbar{
+        width: .6rem;
+        background: hsl(var(--hue), 4%, 53%);
+        }
+
+        ::-webkit-scrollbar-thumb{
+        background: hsl(var(--hue), 4%, 29%);
+        border-radius: .5rem;
+        }
+
+/*===============Brand ===============*/
+
+/* Start Brand Area */ 
+
+/* .site-main .brand-area{
+    padding: 1rem 20rem;
+    margin-bottom: 4rem;
+}
+
+.site-main .brand-area .first-row .col-lg-4{
+    display: flex;
+    justify-content: center;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand{
+    border: 1px solid var(--border-color);
+    text-align: center;
+    padding: 1.8rem 0rem;
+    margin: .9rem 0;
+    width: 180px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand > img{
+    width: 50%;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover{
+    box-shadow: var(--box-shadow);
+    transform: scale(1.1);
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover > img{
+    filter: brightness(0.15);
+}
+
+.site-main .brand-area .experience-area{
+    padding-left: 1rem;
+}
+
+.site-main .brand-area .experience-area span{
+    display: block;
+}
+
+.site-main .brand-area .experience-area .years-area{
+    background: url(../img/client-info-bg.png) no-repeat 45px 20px;
+    padding: 2rem 0;
+    width: 40rem;
+    height: 18rem;
+    padding-left: 8rem;
+    position: relative;
+}
+
+.site-main .brand-area .experience-area .bg-panel{
+    position: absolute;
+    left: -190px; top: 0%;
+    background: #e029290a;
+    width: 400px;
+    height: 400px;
+    margin-left: 340px;
+    z-index: -1;
+}
+
+.site-main .brand-area .experience-area .years-area .years{
+    font: normal bold 84px/40px var(--roboto);
+    color: var(--primary-color2);
+    z-index: 2;
+}
+
+.site-main .brand-area .experience-area .years-area h2 > span{
+    font: normal 600 22px/30px var(--roboto);
+}
+
+.site-main .brand-area .experience-area .call-area{
+    padding-left: 10rem;
+} */
+
+/* End Brand Area */ 
+
+/*===============Section: revSec(使用swiper.js，輸入CDN以及搭配JS) ===============*/
+
+
+.revSec{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E3D9B3;
+    overflow: hidden;
+}
+/*===============Section: loginForm===============*/
+
+
+.backdrop {
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: lightblue;
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.submitted .invalid {
+  border: 1px solid red;
+}
+
+.footer_title{
+    font-family: 'Lato', sans-serif;
+
+}
+.footer_content{
+    font-family: 'Lato', sans-serif;
+
+}
+.footer_subscribe:hover{
+    transform: translateY(-15px);
+
+}
+.footerText{
+    font-family: 'Lato', sans-serif;
+
+}
+
+
+/*為了測試dark theme
+=============== HEADER ===============*/
+/* .header{
+  width: 100%;
+  background-color: var(--body-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: .4s; For animation dark mode
+}
+.nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__toggle{
+  display: inline-flex;
+  font-size: 1.25rem;
+  cursor: pointer;
+} */
+
+/*為了測試dark theme
+=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+/* body.dark-theme{
+  --first-color-dark: hsl(152, 8%, 20%);
+  --title-color: hsl(152, 4%, 95%);
+  --text-color: hsl(152, 4%, 75%);
+  --body-color: hsl(152, 8%, 12%);
+  --container-color: hsl(152, 8%, 16%);
+} */
+
+/*為了測試dark theme
+========== Button Dark/Light ==========*/
+/* .change-theme{
+  color: var(--title-color);
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+.nav__btns{
+  display: inline-flex;
+  align-items: center;
+  column-gap: 1rem;
+} */
+
+/*========== 
+Color changes in some parts of 
+the website, in dark theme 
+==========*/
+
+/* .dark-theme .steps__bg,
+.dark-theme .questions{
+  background-color: var(--first-color-dark);
+}
+
+.dark-theme .product__circle,
+.dark-theme .footer__subscribe{
+  background-color: var(--container-color);
+}
+
+.dark-theme .scroll-header{
+  box-shadow: 0 1px 4px hsla(var(--hue), 4%, 4%, .3);
+} */
+/*以上測試dark theme*/
+
+.progress{ /*進度條底部*/
+    background-color: #b38376;
+}
+.progress-bar-striped, /*動畫*/
+.progress-bar-animated{
+    background-color: #deb3c1;
+    color: #ffffff; /*%顏色*/
+    border: 3px #b38376 double;
+}
+    </style>
+</head>
+
+
+<body>
+<!--===========section1:welcomePage 參考13:11秒 header&nav==========-->
+<!-- <nav class="row justify-content-center">
+    <div class="col-md-10"> 
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    </div>
+ 
+</nav> -->
+
+<!--<section class="container-fluid welcomePage">
+    <div class="row justify-content-center">
+        <div class="col-md-8">hi</div> 
+        <div class="col-md-8">oh</div> col組合若會超過12，flex wrap會起作用，自動換行，因此這一行col8，左右會padding留白各2
+    </div>
+</section>-->
+
+<!-- 
+以下測試：Theme change button 
+<header class="header" id="header">
+    <nav class="nav container">
+        <div class="nav__btns">
+        <!-這是Theme change button ->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+以上測試：Theme change button  -->
+
+<!--===========section1:welcomePage ==========-->
+<section class="sec1">
+    <header class="header1">
+        <a href="#"><img src="/myRwd/imagesForRWD/料世如神logo2.jpg" class="myLogo"></a>
+        <ul class="sec1Ul">
+            <li class="sec1li"><a href="#">Hello</a></li>
+            <li class="sec1li"><a href="#">WhyChooseUS</a></li>
+            <li class="sec1li"><a href="#">Products</a></li>
+            <li class="sec1li"><a href="#">Comment</a></li>
+            <li class="sec1li"><a href="#">Contact</a></li>
+            <li class="sec1li"><a href="#"><button type="button" class="btn btn-primary btnLogin" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Sign in & up!
+            </button></a></li>
+
+        </ul>
+    </header>
+
+    <div class="sec1Content">
+        <div class="sec1textBox">
+            <h2>Hola!<br><span>Liào shìh rú shén</span></h2>
+            <p>一天N粒，包你料世如神。<br>料世如神，is like to be 神。</p>
+            <a href="#" class="welcomeLink"><span class="welcomeButton">Get in this shit!</span></a>
+        </div>
+
+        <div class="sec1imgBox">
+            <img src="/myRwd/imagesForRWD/drink001.png" class="drink">
+        </div>
+    </div>
+    <ul class="thumb">
+        <li><img src="/myRwd/imagesForRWD/drink001.png" onclick="imgSlider('/myRwd/imagesForRWD/drink001.png');changeBgcolor('#A2B38B')"></li>
+        <!-- <li><img src="/myRwd/imagesForRWD/drink002.png" onclick="imgSlider('/myRwd/imagesForRWD/drink002.png');changeBgcolor('#0062be')"></li> -->
+        <li><img src="/myRwd/imagesForRWD/drink003.png" onclick="imgSlider('/myRwd/imagesForRWD/drink003.png');changeBgcolor('#F9E583')"></li> 
+        <li><img src="/myRwd/imagesForRWD/drink004.png" onclick="imgSlider('/myRwd/imagesForRWD/drink004.png');changeBgcolor('#A27CBA')"></li>
+
+    </ul>
+    <ul class="sci">
+        <li><a href="#"><img src="/myRwd/imagesForRWD/icons8-facebook-1-100x100.png" width="60px"></a></li>
+        <li><a href="#"><img src="/myRwd/imagesForRWD/icons8-facebook-messenger-1-100.png" width="60px"></a></li>
+        <li><a href="#"><img src="/myRwd/imagesForRWD/icons8-instagram-100 (1).png" width="60px"></a></li>
+        <li><a href="#"><img src="/myRwd/imagesForRWD/icons8-gmail-logo-100.png" width="50px"></a></li>
+        <li><a href="#"><img src="/myRwd/imagesForRWD/icons8-edvard-munch-96.png" width="50px"></a></li>
+
+    </ul>
+    
+<!--===此區為section1:login form（外結構用BS語法、裡面塞老師的html)==-->
+<div class="container-fluid welcomeButton">
+    <div class="row col-6 mx-auto">
+        <form class="was-validated" id="loginFormStart" novalidate>
+            <fieldset>
+              <legend>Disabled fieldset example</legend>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Disabled input</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" required>
+              </div>
+              <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Disabled select menu</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Disabled select</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+                  <label class="form-check-label" for="disabledFieldsetCheck">
+                    Can't check this
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+          </form>
+    </div>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">好久不見！</h5>
+          <button type="submit" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"> 
+            <!--以下是fork老師的html-->
+            <!-- NOTE: 引入 bootstrap icon  -->
+
+  <div class="container p-5 col-sm-6">
+    <form class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="accountInput">選料鑰匙</label>
+        <input
+          class="form-control"
+          type="text"
+          id="accountInput"
+          name="Account"
+          placeholder="Account"
+          required
+        />
+        <div class="invalid-feedback">請輸入帳號。</div>
+      </div>
+      <div class="mb-3">
+        <label for="passwordInput">選料通關密碼</label>
+        <input
+          class="form-control"
+          type="password"
+          id="passwordInput"
+          name="Passowrd"
+          required
+        />
+        <div class="invalid-feedback">請輸入密碼。</div>
+      </div>
+      <div class="form-check mb-3">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="rememberMeCheckbox"
+          name="RememberMe"
+        />
+        <label class="form-check-label" for="rememberMeCheckbox"
+          >Remember Me</label
+        >
+        <!-- 步驟2 參考文件製作 icon-button(用於觸發顯示彈窗)-->
+        <i
+          class="text-primary bi bi-info-circle"
+          id="rememberMeInfoBtn"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          style="cursor: pointer"
+        ></i>
+      </div>
+      <button type="submit" class="btn btn-primary submitLogin">Login</button>
+    </form>
+    </div>
+  </div> 
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          勾選 Remeber Me，將會記憶您輸入的帳號，幫助您更快速地登入。
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-primary mx-auto"
+            data-bs-dismiss="modal">
+            我知道了
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary submitLogin">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+<!--以上是fork老師的html-->
+</section>
+
+<!--===========section2:whyChooseUs or about==========-->
+<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">15%</div>
+  </div>
+<section class="about section container" id="about">
+    <div class="about_container grid">
+        <img src="/myRwd/imagesForRWD/drink005.png" width="600px"alt="" class="about">
+        
+        <div class="about_data">
+            <h2 class="section_title about_title">
+                <img src="/myRwd/imagesForRWD/whyYouShould2.jpg" class="whyYouShould"> 
+            </h2>
+
+            <p class="about_description">
+                <p>"In sight it must be right."</p><br>
+                <p>粒粒皆『心』苦，是創始人在開發產品時的初心，冀盼各位都能以心入飲，飲後暖心。</>
+                <p>因此希望每位客人當享用我們選料之時，就會進入「料」的「世」界，享有「如神」一般的爽感。</p>
+
+            </p>
+            <div class="about_details">
+
+                <p class="about_details-description">
+                    Made with 100% natural ingredients.
+                    <br><img src="https://img.icons8.com/doodle/48/000000/ok.png" width="20px"/><span style="background-color: rgb(235, 217, 193)">Be gentle with the earth.</span>
+                </p>
+
+                <p class="about_details-description">
+                    Natural ways to heal.
+                    <br><img src="https://img.icons8.com/doodle/48/000000/ok.png" width="20px"/><span style="background-color: antiquewhite">Organic,better life.</span>
+                </p>
+
+                <p class="about_details-description" >
+                    Eatin’ Good in the Neighborhood.
+                    <br><img src="https://img.icons8.com/doodle/48/000000/ok.png" width="20px"/><span style="background-color: antiquewhite">Be with you everyday.</span>
+                </p>
+            </div>
+            
+            <div class="blogLink"> <!--插播：這裡是middleFrame自我介紹的部落格連結語法-->
+                <img src="/myRwd/imagesForRWD/heart-plus-100.png" width="400px">
+                <a href="" class="button--link button--flex">
+                    <img src="/myRwd/imagesForRWD/add-shopping-cart-100.png" class="button_icon" width="400px">
+                </a>
+            </div>
+            <!--本來是用文字當作購物導引，但覺得醜，就改成圖形的 <a href="" class="button--link button--flex">shop now<img src="https://img.icons8.com/doodle/48/000000/spinner-arrow.png"/ width="30px" class="button_icon" ></a> -->
+
+        </div>
+    </div>
+
+</section>
+
+ <!--====================section3: STEPS ====================-->
+ <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 25%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">25%</div>
+  </div>
+ <section class="steps section container">
+    <div class="steps_bg">
+        <h2 class="section_title-center steps_title">
+            <span class="tipsChinese">料世如神選料指南</span>
+            <br>
+            Steps to choose yours   
+
+        <div class="steps_container grid">
+            <div class="steps_card">
+                <div class="steps_card-number">01</div>
+                <h3 class="steps_card-title">宜，直接生吞活飲。</h3>
+                <p class="steps_card-description">
+                   單吃最好吃。
+                </p>
+            </div>
+
+            <div class="steps_card">
+                <div class="steps_card-number">02</div>
+                <h3 class="steps_card-title">宜，搭配奶水。</h3>
+                <p class="steps_card-description">
+                    適合搭配飲品基底口感偏厚、醇、郁之飲品。
+                    <br>
+                    如 Cama 黑絲絨拿鐵、甘蔗の媽媽鮮奶拿鐵、迷客夏蜂蜜大麥拿鐵。
+                    
+                </p>
+            </div>
+
+            <div class="steps_card">
+                <div class="steps_card-number">03</div>
+                <h3 class="steps_card-title">宜，搭配薄感茶飲。</h3>
+                <p class="steps_card-description">
+                    適搭配口感較薄透之飲品，方能突顯飲品本質但又不譁眾取寵。
+                    <br>
+                    如五十嵐青茶、可不可春芽冷露、DrinkStore四季春。
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--==================== section4:PRODUCTS ====================-->
+
+<section class="product section container" id="products">
+    <h2 class="section_title-center">
+        Check out our <br> products
+    </h2>
+
+    <p class="product_description">
+         
+    </p>
+
+    <div class="product_container grid">
+        <article class="product_card">
+            <div class="product_circle"></div>
+
+            <img src="/myRwd/imagesForRWD/布丁文字2.jpg" alt="" class="product_img">
+            <div class="product_circle"><p class="chooseMeText">Let me leave! </p></div>
+
+
+            <h3 class="product_title">布知布覺，丁著你</h3>
+            <span class="product_price">NTD$250/500g</span>
+
+            <button class="button--flex product_button">
+                <img src="/myRwd/imagesForRWD/add-shopping-cart-100.png"/>
+            </button>
+        </article>
+
+        <article class="product_card">
+            <div class="product_circle"></div><div class="product_circle"><p class="chooseMeText">Bite Me<br>Suck me!</p></div>
+
+
+            <img src="/myRwd/imagesForRWD/咖啡凍文字.jpg" width="360px" alt="" class="product_img">
+
+            <h3 class="product_title">凍結時間在咖啡裡</h3>
+            <span class="product_price">NTD$280/500g</span>
+
+            <button class="button--flex product_button">
+                <img src="/myRwd/imagesForRWD/add-shopping-cart-100.png"/>
+            </button>
+        </article>
+
+        <article class="product_card">
+            <div class="product_circle"></div><div class="product_circle"><p class="chooseMeText">Eat up!</p></div>
+
+
+            <img src="/myRwd/imagesForRWD/米漿文字.jpg" alt="" class="product_img">
+
+            <h3 class="product_title">吃米長大，頂天立地</h3>
+            <span class="product_price">NTD$300/500g</span>
+
+            <button class="button--flex product_button">
+                <img src="/myRwd/imagesForRWD/add-shopping-cart-100.png"/>
+            </button>
+        </article>
+
+        <article class="product_card">
+            <div class="product_circle"></div>
+
+            <img src="/myRwd/imagesForRWD/新粉角文字.jpg" width="400px"alt="" class="product_img">
+            <div class="product_circle"><p class="chooseMeText">Please release me!</p></div>
+
+
+            <h3 class="product_title">路邊的蜂蜜要多採</h3>
+            <span class="product_price">NTD$350/500g</span>
+
+            <button class="button--flex product_button">
+                <img src="/myRwd/imagesForRWD/add-shopping-cart-100.png"/>
+            </button>
+        </article>
+
+        <!-- <article class="product_card">
+            <div class="product_circle"></div>
+
+            <img src="/myRwd/imagesForRWD/CAMA.png" width="200px" alt="" class="product_img">
+
+            <h3 class="product_title">Succulent Plant</h3>
+            <span class="product_price">$10.99</span>
+
+            <button class="button--flex product_button">
+                <img src="/myRwd/imagesForRWD/add-shopping-cart-100.png"/>
+            </button>
+        </article> -->
+
+        <article class="product_card">
+            <div class="product_circle"><p class="chooseMeText">Please Choose Me!</p></div>
+
+            <img src="/myRwd/imagesForRWD/晶球文字.jpg" alt="" class="product_img">
+
+            <h3 class="product_title">好吃塑膠的魔力</h3>
+            <span class="product_price">NTD$250/500g</span>
+
+            <button class="button--flex product_button">
+                <img src="/myRwd/imagesForRWD/add-shopping-cart-100.png"/>
+            </button>
+        </article>
+    </div>
+</section>
+
+               
+ <!--==================== section5: QUESTIONS ====================-->
+ <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 65%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">65%</div>
+  </div>
+ <section class="questions section" id="faqs">
+    <h2 class="section_title-center questions_title container">
+        Some common questions <br> were often asked
+    </h2>
+
+    <div class="questions_container container grid">
+        <div class="questions_group">
+            <div class="questions_item ">
+                <header class="questions_header">
+                    <i class="ri-add-line questions_icon"></i>
+                    <h3 class="questions_item-title">
+                        何時上新品？
+                    </h3>
+                </header>
+
+                <div class="questions_content">
+                    <p class="questions_description">
+                        我該如何選料？
+                    </p>
+                </div>
+            </div>
+
+            <div class="questions_item">
+                <header class="questions_header">
+                    <i class="ri-add-line questions_icon"></i>
+                    <h3 class="questions_item-title">
+                        創意吃法參考？
+                    </h3>
+                </header>
+
+                <div class="questions_content">
+                    <p class="questions_description">
+                        Plants are easy way to add color energy and transform your 
+                        space but which planet is for you. Choosing the right plant.
+                    </p>
+                </div>
+            </div>
+
+            <div class="questions_item">
+                <header class="questions_header">
+                    <i class="ri-add-line questions_icon"></i>
+                    <h3 class="questions_item-title">
+                        貨源？
+                    </h3>
+                </header>
+
+                <div class="questions_content">
+                    <p class="questions_description">
+                        Plants are easy way to add color energy and transform your 
+                        space but which planet is for you. Choosing the right plant.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="questions_group">
+            <div class="questions_item">
+                <header class="questions_header">
+                    <i class="ri-add-line questions_icon"></i>
+                    <h3 class="questions_item-title">
+                        一次大量批發優惠價？
+                    </h3>
+                </header>
+
+                <div class="questions_content">
+                    <p class="questions_description">
+                        Plants are easy way to add color energy and transform your 
+                        space but which planet is for you. Choosing the right plant.
+                    </p>
+                </div>
+            </div>
+
+            <div class="questions_item">
+                <header class="questions_header">
+                    <i class="ri-add-line questions_icon"></i>
+                    <h3 class="questions_item-title">
+                        有試吃品嗎？
+                    </h3>
+                </header>
+
+                <div class="questions_content">
+                    <p class="questions_description">
+                        Plants are easy way to add color energy and transform your 
+                        space but which planet is for you. Choosing the right plant.
+                    </p>
+                </div>
+            </div>
+
+            <div class="questions_item">
+                <header class="questions_header">
+                    <i class="ri-add-line questions_icon"></i>
+                    <h3 class="questions_item-title">
+                       食安證明？
+                    </h3>
+                </header>
+
+                <div class="questions_content">
+                    <p class="questions_description">
+                        Plants are easy way to add color energy and transform your 
+                        space but which planet is for you. Choosing the right plant.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+
+<!--==================== Section: reviewPage(revSec) (先插入Swiper.js CDN、搭配JS) ====================-->
+
+<section class="revSec">
+    <div class="container">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-container mySwiper">
+         
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/myRwd/imagesForRWD/review.jpg" width="200px"
+                        alt="">
+                    <div class="card-description">
+                        <div class="card-title">
+                            <h4></h4>
+                        </div>
+                        <div class="card-text">
+                            <p></p>
+                        </div>
+                        <div class="card-link">
+                          <a href="#"></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <img src="/myRwd/imagesForRWD/New_Chucky.webp"
+                        alt="" class="revImg">
+                    <div class="card-description">
+                        <div class="card-title">
+                            <h4>Chucky said...</h4>
+                        </div>
+                        <div class="card-text">
+                            <p>如果屁孩遇到我給我「料世如神」的產品，我想，我會考慮把那些屁孩們當隔夜飯...</p>
+                        </div>
+                        <div class="card-link">
+                          <a href="#">more</a>
+                        </div>
+                </div>
+            </div>
+                <div class="swiper-slide">
+                    <img src="/myRwd/imagesForRWD/jason.jpg"
+                    alt="" class="revImg">
+                <div class="card-description">
+                    <div class="card-title">
+                        <h4>I am Jason...</h4>
+                    </div>
+                    <div class="card-text">
+                        <p>早點吃到「料世如神」的產品，我就不會在13號星期五那天去水晶湖附近幹大事了..hmm...
+                        </p>
+                    </div>
+                    <div class="card-link">
+                      <a href="#">more</a>
+                    </div>
+                </div>
+            </div>
+                <div class="swiper-slide">
+                    <img src="/myRwd/imagesForRWD/texasMassacre.jpeg"
+                    alt="" class="revImg">
+                <div class="card-description">
+                    <div class="card-title">
+                        <h4>Leatherface says...</h4>
+                    </div>
+                    <div class="card-text">
+                        <p>唯有「料世如神」，能讓我放下電鋸立地成佛。</p>
+                    </div>
+                    <div class="card-link">
+                      <a href="#">more</a>
+                    </div>
+                </div>
+            </div>
+                <div class="swiper-slide">
+                    <img src="/myRwd/imagesForRWD/hannibal.png"
+                    alt="" class="revImg">
+                <div class="card-description">
+                    <div class="card-title">
+                        <h4>Hannibal feels..</h4>
+                    </div>
+                    <div class="card-text">
+                        <p>如果早點遇見「料世如神」，就不會吃「會動的形體」了...</p>
+                    </div>
+                    <div class="card-link">
+                      <a href="#">more</a>
+                    </div>
+                </div>
+            </div>
+            
+                <div class="swiper-slide">
+                    <img src="/myRwd/imagesForRWD/original-hannibal.jpeg"
+                    alt="" class="revImg">
+                <div class="card-description">
+                    <div class="card-title">
+                        <h4>Damn HOT Hannibal shares...</h4>
+                    </div>
+                    <div class="card-text">
+                        <p>「料世如神」，讓我金盆洗手。一天多粒，滿我口腹之慾。</p>
+                    </div>
+                    <div class="card-link">
+                      <a href="#">more</a>
+                    </div>
+                </div>
+            </div> 
+              
+        
+        </div>
+    </div>
+</section>
+<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">85%</div>
+  </div>
+
+
+
+<!--==================== CONTACT ====================-->
+<section class="contact section container" id="contact">                
+    <div class="contact_container grid">
+        <div class="contact_box">
+            <h2 class="section_title">
+                How to  <br> Reach us
+            </h2>
+
+            <div class="contact_data">
+                <div class="contact_information">
+                    <h3 class="contact_subtitle">Call us for instant support</h3>
+                    <span class="contact_description">
+                        <i class="ri-phone-line contact_icon"></i>
+                        +886 938 953 954
+                    </span>
+                </div>
+
+                <div class="contact_information">
+                    <h3 class="contact_subtitle">Write us by mail</h3>
+                    <span class="contact_description">
+                        <i class="ri-mail-line contact_icon"></i>
+                        happxia@gmail.com
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <form action="" class="contact_form">
+            <div class="contact_inputs">
+                <div class="contact_content">
+                    <input type="email" placeholder=" " class="contact_input">
+                    <label for="" class="contact_label">Email</label>
+                </div>
+
+                <div class="contact_content">
+                    <input type="text" placeholder=" " class="contact_input">
+                    <label for="" class="contact_label">Subject</label>
+                </div>
+
+                <div class="contact_content contact_area">
+                    <textarea name="message" placeholder=" " class="contact_input"></textarea>                              
+                    <label for="" class="contact_label">Message</label>
+                </div>
+            </div>
+
+            <button class="button button--flex sendMessageButtonArea">
+                Send Message
+                <img src="/myRwd/imagesForRWD/sent-100.png" class="sendMessageButton">
+            </button>
+        </form>
+    </div>
+</section>
+</main>
+
+<!--==================== FOOTER ====================-->
+<footer class="footer section">
+<div class="footer_container container grid">
+    <div class="footer_content">
+        <a href="#" class="footer_logo">
+           <img src="/myRwd/imagesForRWD/料世如神logo2.jpg" width="100em">
+        </a>
+
+        <h3 class="footer_title footerText">
+            Subscribe to our newsletter <br> to stay update
+        </h3>
+
+        <div class="footer_subscribe footerText">
+            <input type="email" placeholder="Enter your email" class="footer_input">
+
+            <button class="button button--flex footer_button buttonForSubscribe"> <!--訂閱按鈕-->
+                Subscribe
+                <i class="ri-arrow-right-up-line button_icon"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="footer_content">
+        <h3 class="footer_title footerText">Our Address</h3>
+
+        <ul class="footer_data">
+            <li class="footer_information">Taiwan</li>
+            <li class="footer_information">Taipei Main Station</li>
+            <li class="footer_information">123-456-789</li>
+        </ul>
+    </div>
+
+    <div class="footer_content">
+        <h3 class="footer_title footerText">Contact Us</h3>
+
+        <ul class="footer_data">
+            <li class="footer_information">+886 938 953 954</li>
+            
+            <div class="footer_social">
+                <a href="https://www.facebook.com/" class="footer_social-link">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/" class="footer_social-link">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://twitter.com/" class="footer_social-link">
+                    <i class="ri-twitter-fill"></i>
+                </a>
+            </div>
+        </ul>
+    </div>
+
+    <div class="footer_content">
+        <h3 class="footer_title footerText">
+            We accept all credit cards
+        </h3>
+
+        <div class="footer__cards">
+            <img src="/myRwd/imagesForRWD/card-payment-100.png" alt="" class="footer_card">
+            <img src="/myRwd/imagesForRWD/mastercard-100.png" alt="" class="footer_card">
+            <img src="/myRwd/imagesForRWD/debit-card-100.png" alt="" class="footer_card">
+            <img src="/myRwd/imagesForRWD/visa-100.png" alt="" class="footer_card">
+            <img src="/myRwd/imagesForRWD/cash-in-hand-100.png" alt="" class="footer_card">
+
+        </div>
+    </div>
+</div>
+
+
+<p class="footer_copy">&#169; 料世如神. All rigths reserved</p>
+</footer>
+
+<!--=============== SCROLL UP ===============-->
+<a href="#" class="scrollUp" id="scroll-Up"> 
+  <img src="/myRwd/imagesForRWD/up-48.png"/ class="scrollUp_icon">
+  <!-- <i class="ri-arrow-up-fill scrollUp__icon"></i> -->
+</a>
+
+<!--=============== SCROLL REVEAL ===============-->
+<!-- <script src="assets/js/scrollreveal.min.js"></script> -->
+
+<!--=============== change image on click(welcomePage) + swiper.js (reviewPage:revSec)  ===============-->
+
+<script type="text/javascript">
+//change image on click
+    function imgSlider(anything){
+        document.querySelector('.drink').src = anything;
+
+    }
+
+    function changeBgcolor(color){
+        const sec1 =document.querySelector('.sec1')
+        sec1.style.background = color
+    }
+//
+
+var swiper = new Swiper('.swiper-container', {
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev'
+	},
+	slidesPerView: 1,
+	spaceBetween: 10,
+	// init: false,
+	pagination: {
+	  el: '.swiper-pagination',
+	  clickable: true,
+	},
+
+  
+	breakpoints: {
+	  620: {
+		slidesPerView: 1,
+		spaceBetween: 20,
+	  },
+	  680: {
+		slidesPerView: 2,
+		spaceBetween: 40,
+	  },
+	  920: {
+		slidesPerView: 3,
+		spaceBetween: 40,
+	  },
+	  1240: {
+		slidesPerView: 4,
+		spaceBetween: 50,
+	  },
+	} 
+    });
+
+    </script>
+
+<!--loginForm彈出登入視窗-->
+    <script>
+       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+       crossorigin="anonymous"</script>
+
+
+</body>
+</html>
