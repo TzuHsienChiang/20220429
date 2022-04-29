@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet"> 
+    <!--這邊先link font-awesome字型，後面才可用style-->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Della+Respira&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!--animated CDN-->
+    <script src="/practice/myWebsite.html/0-myWebsite9.js"></script>
+    
+    <title>Document</title>
+
+<!--嘗試加入animated-->
+<!--這邊是下拉式選單調整-->
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+/*--------*/
+.welcomeVideo{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding:0 5% ;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.welcomeVideo-list{
+    font-family: 'Noto Serif', serif;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    padding:20px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.welcomeVideo-list ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+} 
+.welcomeVideo-list ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+.welcomeVideo-content{
+    text-align: center;
+
+}
+.welcomeVideo-content h1{
+    font-size: 140px;
+    color: #F7DA94;
+    /* font-family: 'Caveat', cursive; */
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+
+}
+.welcomeVideo-content a{
+    text-decoration: none;
+    display: inline-block;
+    color: #e4b19b;
+    font-size: 24px;
+    font-family: 'Noto Serif', serif;
+    border: 4px #b4400e double;
+    padding: 10px 50px;
+    border-radius: 50px;
+    margin-top: 20px;
+    
+
+}
+
+.backVideo{
+    position: absolute;
+    right:0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio:16/9){
+    .backVideo{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    .backVideo{
+        width: auto;
+        height: 100%;
+    }
+}
+/*--------------------sectionTyping-----------------*/
+
+
+    .type-container{
+        margin-bottom: 10px;
+        width: 100%;
+        height: 100vh;
+        background-color: #bcb4e0;
+        color:#fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .type-container h1{
+        font-size: 80px;
+        font-weight: 600;
+    }
+    .auto-type{
+        color: #f7dccf;
+    }
+
+
+/*--------------------section1-----------------*/
+    .section1{
+    display: flex; /*所有section的容器，所以要宣告使用flex*/
+    background-color: brown;
+    height: fit-content;
+    flex-direction: column;
+   }
+   .upperFrame1{
+       display: flex;
+       background-color: rgb(233, 128, 0);
+       height: 100px;
+       border-radius: 250px;
+       height: fit-content;/*這樣就不會有文字的框和frame不合的情況）*/
+   }
+
+   .upperFrame1L{ /*左上角的header區塊*/
+       display: flex;
+       background-color:#8F804B;
+       font-family: 'Caveat', cursive;
+       font-weight: bold;
+       font-size: 30px;
+       flex: none;
+       width: 30%;
+       padding-top: 20px;
+       padding-left: 10%;
+
+   }
+   .upperFrame1R{ /*右上角的header區塊*/
+       font-family: 'Noto Serif', serif;
+       display: flex;
+       background-color:#8F804B;
+       flex:1;
+       justify-content: flex-end;
+       text-align: center; /**/
+   }
+   .upperFrame1R ul{
+       display: inline-flex;
+       list-style: none;
+   }
+   .upperFrame1R ul li{
+       width: 120px;
+       margin: 15px;
+       padding: 15px;
+   }
+   .upperFrame1R ul li a{
+       text-decoration: none;
+       color:#fff; /*list標題字體顏色*/
+   }
+   .active,.upperFrame1R ul li:hover{
+       background-color:#F7DA94; /*hover來選單會變的色*/
+       border-radius: 3px;
+
+   }
+   .upperFrame1R .fa{
+       margin-right: 8px;
+   }
+   .option1{
+       color: rgb(224, 115, 115);
+       /* background-color: #6C6024;   */
+       font-size: 14px;
+       flex:none;
+       width: 200px;
+       align-self: flex-end;
+       margin-right: 10px;
+       text-align:center;  
+   }
+   .option2{
+       
+       color: rgb(224, 115, 115);
+       /* background-color:#6C6024;*/       
+       font-size: 14px;
+       flex:none;
+       width: 200px;
+       align-self: flex-end;
+       margin-right: 10px;
+       text-align:center;  
+   }
+   .option3{
+       color: rgb(224, 115, 115);
+       /* background-color: #6C6024;*/       
+       font-size: 14px;
+       flex:none;
+       width: 200px;
+       align-self: flex-end;
+       margin-right: 10px;
+       text-align:center;  
+   }
+   .option4Title{ /*了解哪個我？*/
+       /* background-color:#6C6024;*/
+       font-size: 14px;
+   }
+   .option4{
+       display: none; /*讓小分類drop down在還沒動作前先隱藏*/
+       color: rgb(224, 115, 115);
+       background-color: #6C6024;  
+       flex:none;
+       width: 200px;
+       align-items: flex-end;
+       margin-right: 10px;
+       text-align:center;  
+   }
+   .upperFrame1R ul li:hover .option4 { /*為了讓剛剛隱藏的下拉式選單在滑鼠移過來時顯示出來*/
+       display: block;
+       position: absolute;
+       background-color:#e0ba62;  /*下拉式選單底色*/
+       margin-top: 15px;
+       margin-left: -15px;
+    }
+    .upperFrame1R ul li:hover .option4 ul{
+        display: block;
+        margin: 10px;
+    }
+    .upperFrame1R ul li:hover .option4 ul li{
+        width: 150px;
+        padding: 15px;
+        border-bottom: 1px dotted #fff;
+        background-color: transparent;
+        border-radius: 0;
+        text-align: left;
+    }
+    .upperFrame1R ul li:hover .option4 ul li:last-child{
+        border-bottom: 0;
+    }
+    .upperFrame1R ul li:hover .option4 ul li a:hover{
+        color: #cc5e2f; /*下拉式選單裡的字體顏色*/
+    }
+
+    
+   .mainBody{ /*主體色*/
+       display: flex;
+       background-color:#C5C35F;
+       
+   }
+
+   .leftFrame{ /*左邊的直欄*/
+       background-color: #C5C35F;
+       color: rgb(156, 125, 83);
+       /* width: 100px; */
+       height: 1000px;
+       flex-direction: column;
+       flex:none;
+       width: 150px;
+   }
+
+   
+   .middleFrame{  /*自我介紹內文Name圖片+自我介紹*/
+       background-color:#9F9F45;
+       color: rgb(156, 125, 83);
+       width: 400px;
+       height: 400px;
+       /* justify-self:flex-start???; */
+       flex-grow: 1;
+       align-self:center;
+       text-align: center;
+       margin-right: -70px; /*讓他和旁邊橢圓重疊，+是拉開相對距離，-是
+       扣掉相對距離就是靠近*/
+       bottom: 150px;
+       right:150px;
+       
+   }  /* flex:1 0 120px 三個縮寫grow shrink basis 這三個要搞清楚*/
+      /*還要搞懂padding margin*/
+/*插播：這裡是middleFrame自我介紹的部落格連結語法*/
+   .blogLink{
+      width: 100px;
+      height: 100px;
+      background-color: rgb(220, 236, 192);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative; /*父元素加這個後，下面的blogLink a連結才沒爆版*/
+      margin-right: 20px;/*搭配下面的設定讓每一個blogLink區域的icon分開*/
+      margin-bottom: 20px;
+      border-radius: 6px;
+      overflow: hidden;/*這邊的設定讓每一個blogLink區域的icon分開*/
+      transition: transform 0.5s;
+  }
+  .blogLink:hover{ /*接續上方：transition: transform 0.5s。目的：讓blogLink區域的所有icon當滑鼠移過去時會往上推。*/
+      transform: translateY(-10px);
+  }
+ 
+  .blogLink img{ /*blogLink底下的FB icon圖樣*/
+      width: 28px;
+  }
+  .blogLink a{ /*blogLink底下的link icon圖樣*/
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      background-color: #F7DA94;
+      display: flex;
+      justify-content: center;
+      align-items: center;/* justify-content: center;
+      align-items: center 使得link的icon變致中*/
+      opacity: 0; /*目的：滑鼠還沒移過來前是fb圖樣，移過來後變link圖樣*/
+      /*滑鼠還沒移過來前是0，看不見link，移過來後會花0.5秒出現link圖案*/
+      transition: 0.5s ;
+ 
+  }
+  .blogLink a:hover{ /*接續 上面.blogLink a{opacity:0;transition:0.5s}*/ /*目的：滑鼠還沒移過來前是fb圖樣，opacity是0，看不見link，移過來後會花0.5秒出現link圖案*/
+      opacity:1; /*一開始狀態是0，未顯示圖案，因為變成1，所以移過來後花0.5秒轉換顯示出link圖樣*/
+  }
+/*插播：以上是middleFrame自我介紹的部落格連結語法*/
+
+
+   .greeting{  /*About Tzu Hsien Chiang*/
+       background-color:rgb(156, 143, 83);
+       color: rgb(230, 217, 163);
+       border: 5px rgb(224, 208, 120) double;
+       font-family: 'Nothing You Could Do', cursive;
+       font-weight: bold;
+       font-size: 18px;
+       width: 300px;
+       height: 100px;
+       /* justify-self:flex-start???; */
+       flex-grow: 1;
+       align-self:center;
+       text-align:left;
+       margin-bottom: -70px; /*讓他和旁邊橢圓重疊，+是拉開相對距離，-是
+       扣掉相對距離就是靠近*/
+       position:relative;
+       bottom: 300px;
+       left:100px;
+       transition: box-shadow 1s, background-color 1s,filter 1s;    
+   }/*補充縮寫：
+transition 屬性可以分開寫，也可以合併在一起，但是縮寫有以下的固定順序。
+transition-property、transition-duration、transition-timing-function、transition-delay
+下面這個例子：
+transition: box-shadow 1s linear 1s
+這句的 transition 屬性順序是 box-shadow（transition-property）、1s（transition-duration）、linear（transition-timing-function）、1s（transition-delay)
+因為 transition-duration 和 transition-delay 這兩個屬性都是時間數值，所以單寫一個時間數值的時候，是指 transition-duration。
+如果寫兩個時間數值，前面的是 transition-duration，後面的是 transition-delay。*/
+   .greeting:hover{ /*讓滑鼠移過去方塊會變亮*/
+        box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.5);
+        filter: brightness(1.5);
+    }
+    .greeting:active{ /*點擊會變色*/
+        opacity: 0.8;
+        background-color: rgba(212, 90, 90, 0.644); 
+    }
+   
+   /*.middleFrameContent{ 自我介紹旁邊的橢圓形簡介 最後隱藏他是因為不規則橢圓形很難塞我的版面
+       display: flex;
+       background-color: black;
+       border-radius: 30% 60% 60% 50% / 80% 40% 70% 30%;
+       width: 300px;
+       height: 500px;           
+       align-self:flex-end;
+       position: relative;
+       left: 30px;
+
+       color:antiquewhite;
+       font-size:60%; 
+       font-weight: bold;
+       text-align: center; 
+       
+   }
+   .content1{
+       color: antiquewhite;
+       width:fit-content;
+       /* width: 200px; 為了要把文字塞在不規則圖案中間，所以我在設置一個div在不規則圖案裡面，並把width以及height設置比不規則圖案小，
+       就可以讓字體完整塞在不規則圖案裡。也別忘記如果要使用flex的話要在上一層（也就是不規則圖案作為此層的container）宣個display:flex
+       font-size:13px;
+       font-weight: bold;
+       align-self: center;
+       text-align:center;
+       line-height: 15px;
+   } */
+   .middleFrameContent2{
+    display: flex;
+       background-color: rgb(186, 211, 116);
+       font-size: 13px;
+       font-family: 'Noto Serif TC', serif;
+       color: #fff;
+       width: 800px;
+       height: 250px;           
+       align-self:flex-end;
+       position: relative;
+       left: -20px;
+       bottom: 20px;
+       
+       animation-name: example;
+       animation-duration: 5s;
+       animation-iteration-count: infinite;
+       animation-direction: normal;  
+   }
+   @keyframes example {
+        0%   {background-color:rgba(255, 0, 0, 0.452); left:0px; top:0px;}
+        50%  {background-color:rgb(136, 196, 236); left:200px; top:0px;}
+        100% {background-color:rgb(236, 196, 136); left:0px; top:0px;}
+      }
+
+   .rightFrame{
+       justify-content: flex-end;
+       align-items: flex-end;
+   }
+   /*.button1{
+       background-color: rgba(106, 106, 165, 0.795);
+    
+       justify-self: flex-end;
+       align-self: flex-end; 我一開始這裡是用justify-contents 和align-items，但我想到這兩個屬性只能拿來操控父元素容器也就是這邊的mainbody，，所以改成self用法，成功。
+   } */
+   
+   /* .line1{ 
+       width: 6px;
+       height: 100%;
+       background-color: rgb(78, 129, 129);
+       display: inline-block;
+   } */
+   
+    /*.dropdown:hover .dropdown-content {
+        display: block;
+    } */ /*下拉式選單*/
+   
+    
+   
+  
+/*--------------------section2-----------------*/
+   .section2{
+        margin-top: 10px;
+        display: flex; /*所有section的容器，所以要宣告使用flex*/            
+        background-color:#F7DA94;
+        width: 100%;
+        height: 1000px; /*本來是1000px比較符合圖片擺放，但是黃金比例其實是w100% h100vh*/
+        /* height: fit-content; */
+        /* flex-direction: column; */
+
+   }
+/*left-col*/
+   .left-col{
+       display: flex;
+       flex-direction:column; /*positipn設定圖片位置還要flex媽？*/
+       background-color: rgb(161, 94, 12);
+       /* width:500px;
+       /* height: 100px; */
+       /* flex-direction: column;   */
+       flex-basis: 40%; /*是width的意思？*/
+       height: 100%;
+       position: relative;
+   }
+   .white-bar{
+       position: absolute;
+       height:20px;
+       width: 280px;
+       background-color: #fff; /*bar線*/
+       top:180px;
+       right:0;
+
+   }
+   .text.bar2{
+       position: absolute;
+       top:30%;
+       left:4%;
+       width: 460px;
+
+   }
+   .blackGuy-img{
+       bottom: 50px;
+       right:-43px;
+   }
+
+/*right-col*/
+   .right-col{
+       display: flex;
+       background-color: bisque;
+       flex-basis: 70%;
+       height: 100%;
+       justify-self: flex-end;
+       position: relative;
+   }
+   .navBar2{
+       position: absolute;
+       right: 45px;
+       top:85px;
+       display: flex;
+   }
+   .navBar2 li{
+       list-style: none;
+       margin:0 40px;
+       display: inline-block;
+       font-size: 14px;
+       font-weight: bold;
+       font-family: 'Noto Serif', serif;
+       cursor: pointer; /*cursor pointer*/
+   }
+   .red-bar{
+    position: absolute;
+    height:20px;
+    width: 280px;
+    background-color: rgba(179, 125, 8, 0.808); /*bar線*/
+    top:180px;
+    left:0;
+
+   }
+   .red-bar span{ /*red-bar旁邊小點*/
+    position: absolute;
+    height:20px;
+    width: 9px;
+    background-color: rgba(179, 133, 8, 0.507); /*bar線*/
+    top:0px;
+    left:287px; /*red-bar旁邊小點*/
+   }
+   .direction{
+       position:absolute;
+       top:0px;
+       align-items: center;
+   }
+/* 這邊是left-col照片 */
+   .blackGuy{
+       position: absolute;
+       top:220px;
+       left: 150px;
+       opacity: 1;
+       transition: 0.5s;
+
+   }
+   .blackGuy:hover{
+        opacity: 1;
+        transform: translate(100px, 100px) rotate(90deg) scale(1.5);
+
+   }
+
+   .aunt2{
+       position: absolute;
+       top:450px;
+       left: 30px;
+       opacity: 0.8;
+       
+   }
+   .aunt2:hover{
+       opacity: 1;
+       transform: rotate(-30deg);
+   }
+   .study{
+    position: absolute;
+    top:850px;
+    left: 100px;
+    opacity: 0.8;
+   }
+   .study:hover{
+    opacity: 1;
+    transform: scale(1.2);
+   }
+
+   .figma2{
+    /* flex-direction: row;
+    justify-self: center;
+    position: absolute;
+    top:50px;
+    left: 50px; */    
+    position: absolute;
+    bottom: 180px;
+    right:50px;
+   }
+   .figma2:hover{
+       animation: swing 1s;
+       transform:scaleX(1.5)
+   }
+
+
+   /* 這邊是right-col照片 */
+.brain{
+    position: absolute;
+    bottom:550px;
+    left: 100px;
+    align-self: auto;
+    
+}
+.brain:hover{
+    border-radius: 20%;
+    transform:rotate(30deg);
+}
+
+   
+.blog{
+    position: absolute;
+    bottom:400px;
+    left: 500px;
+    align-self: auto;
+    opacity: 0.8;
+}
+.blog:hover{
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+.semi3{
+    position: absolute;
+    bottom:50px;
+    left: 200px;
+    align-self: auto;
+
+}
+.semi3:hover{
+    box-shadow:10px 10px 5px #6C6024;
+}
+.experience{
+    width:40%;
+    z-index: 1;
+    position: absolute;
+    left:80%;
+}
+
+/*--------------------section3-----------------*/
+
+   .section3{
+        margin-top: 10px;
+
+        background-color: rgba(35, 48, 122, 0.699);
+        display: flex; /*所有section的容器，所以要宣告使用flex*/
+        height: 600px;
+        flex-direction: column;
+        margin-top: 10px;
+   }
+   .header{ /*主要背景底色*/
+       font-family: 'Noto Serif', serif;
+       min-height: 100vh;
+       width: 100%;
+       background:#DCE3ED;
+       color: #fff;
+       position: relative;
+   }
+ /*right-col-s3*/
+
+   nav{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       position: relative;
+       z-index: 1; /*讓名字Tzu Hsien Chiang不被left-sidebar覆蓋*/
+   }
+   .logo{
+       text-decoration: none;
+       color: #fff;
+       font-size: 40px;
+       font-weight: bold;
+       padding-top: 10px;
+       padding-left: 10%;
+   }
+   .nav-links{ /*選單區底色*/
+       text-align: right;
+       background-color:#E9D7CA;
+       padding: 10px 30px;
+       border-bottom-left-radius:18px ;
+
+   }
+   .nav-links ul li{
+       list-style: none;
+       display: inline-block; /*清單變成橫向的*/
+       padding: 10px 25px;
+   }
+   .nav-links ul li a{ /*選單區文字顏色*/
+       font-family: 'Noto Serif', serif;
+       color: rgb(216, 136, 3);
+       text-decoration: none;
+       font-size: 15px;
+   }
+   .left-sidebar{
+       width: 20%;
+       height:100%;
+       position: absolute;
+       left: 0;
+       top:0;
+       background-color:#8C90AB;
+   }
+   .row{
+       padding: 0 10%;
+       display: flex;
+       align-items: flex-end;
+       justify-content: space-between;
+       position: relative;
+       margin-top: 5%;
+
+   }
+   .left-col-s3{
+       flex-basis: 40%;
+   }
+   .right-col-s3{
+       flex-basis: 55%;
+   }
+   .left-col-s3 img{
+       width: 80%;
+       cursor: pointer;
+       filter: grayscale(0);
+       transition: filter 1s;
+   }
+   .left-col-s3 img:hover{
+       filter: grayscale(1);
+   }
+/*left-col-s3*/
+   .right-col-s3 h1{
+     font-size: 55px;
+     font-weight: 500;
+   }
+   .right-col-s3 p{
+       color:#c1c5f3;
+       margin:20px 0 70px ;
+       font-size: 20px;
+   }
+   .social-media{
+    display: flex;
+    margin-top: 30px;
+   }
+   .icon-s3{
+       width: 100px;
+       height: 100px;
+       background-color: rgb(224, 234, 255);
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       position: relative; /*父元素加這個後，下面的icon-s3 a連結才沒爆版*/
+       margin-right: 20px;/*搭配下面的設定讓每一個icon-s3區域的icon分開*/
+       margin-bottom: 20px;
+       border-radius: 6px;
+       overflow: hidden;/*這邊的設定讓每一個icon-s3區域的icon分開*/
+       transition: transform 0.5s;
+   }
+   .icon-s3:hover{ /*接續上方：transition: transform 0.5s。目的：讓icon-s3區域的所有icon當滑鼠移過去時會往上推。*/
+       transform: translateY(-20px);
+   }
+
+   .icon-s3 img{ /*icon-s3底下的FB icon圖樣*/
+       width: 28px;
+   }
+   .icon-s3 a{ /*icon-s3底下的link icon圖樣*/
+       position: absolute;
+       top:0;
+       left:0;
+       width: 100%;
+       height: 100%;
+       background-color: #F7DA94;
+       display: flex;
+       justify-content: center;
+       align-items: center;/* justify-content: center;
+       align-items: center 使得link的icon變致中*/
+       opacity: 0; /*目的：滑鼠還沒移過來前是fb圖樣，移過來後變link圖樣*/
+       /*滑鼠還沒移過來前是0，看不見link，移過來後會花0.5秒出現link圖案*/
+       transition: 0.5s ; 
+   }
+   .icon-s3 a:hover{ /*接續 上面.icon-s3 a{opacity:0;transition:0.5s}*/ /*目的：滑鼠還沒移過來前是fb圖樣，opacity是0，看不見link，移過來後會花0.5秒出現link圖案*/
+       opacity:1; /*一開始狀態是0，未顯示圖案，因為變成1，所以移過來後花0.5秒轉換顯示出link圖樣*/
+
+   }
+   /* .icon-s3:hover{ 註：為了好辨讀，寫在上方要hover改變做出「上推動態」的icon-s3下方。但照理來說是寫在這，因為這是整個網頁最後一個寫上的語法。
+    接續上方：transition: transform 0.5s。目的：讓icon-s3區域的所有icon當滑鼠移過去時會往上推。
+       transform: translateY(-10px);
+   } */
+   .messageBoxText{
+       position: absolute;
+       bottom:-60%;
+   }
+   .messageBox button{ /*或class="leaveMessage"*/
+    position: absolute;
+    bottom:-70%;
+    right: 38%;
+   
+   }
+/*鼠標特效*/
+#icon {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+}
+
+/*--------------------section4-----------------*/
+
+   .section4{
+        background-color: rgb(175, 206, 147);
+        display: flex; /*所有section的容器，所以要宣告使用flex*/
+        height: 600px;
+        flex-direction: column;
+   }
+   .section5{
+        background-color: rgb(35, 122, 122);
+        display: flex; /*所有section的容器，所以要宣告使用flex*/
+        height: 600px;;
+        flex-direction: column;
+   }
+
+
+
+   /* html{
+       scroll-behavior: smooth;
+    }
+    .full-page{
+        height: 100vh;
+    } */
+
+</style>
+</head>
+
+<body>
+
+<!-- <script>
+</script> -->
+<!-------------------sectionVideo---------------------->
+<div class="welcomeVideo">
+    <video autoplay loop muted plays-inline class="backVideo">
+        <source src="/videoMyWebsite/3.mp4" type="video/mp4">
+    </video>
+  <nav class="welcomeVideo-list">
+      <ul>
+          <li><a herf="">First Impression</a></li>
+          <li><a herf="">Experience</a></li>
+          <li><a herf="">Talk!</a></li>
+          <li><a herf="">Me, Myself & I </a></li>
+      </ul>
+  </nav>
+  <div class="welcomeVideo-content">
+      <h1>Who am I ?</h1>
+      <a href="#type-container">Oh,I'd love to!</a>
+      <a href="#type-container">I have no interest in it.</a>
+  </div>
+</div>
+
+<!-------------------sectionTyping---------------------->
+
+<div class="type-container" id="type-container">
+    <h1>I am <span class="auto-type"></span></h1>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+var typed=new Typed(".auto-type",{
+    strings:["Modest","Candid","Extroverted","......?"],
+    typeSpeed:150,
+    backSpeed:150,
+    loop:true
+})
+</script>
+
+<!-------------------section1---------------------->
+
+<div class="section1" id="section1">
+    <div class="upperFrame1">
+        <div class="upperFrame1L">
+            <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-so-so-96.png" height="40px">
+            Hi,I am Tzu Hsien Chiang!
+        </div>
+        
+        <div class="upperFrame1R"> <!--今天發現nav標籤-->
+            <ul>
+            <li><a href="#" class="active"class="option1"><img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-clapperboard-96.png" width="25px" >First</a></li> <!--引導到影片頁1-->
+            <li><a href="#" class="option2"><img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-browse-folder-1-96.png" width="25px">Experience</a> </li><!--引導到人生跑馬燈人生跑馬燈頁2--> <!--本來的icon url是沒有fa的，但我為了調整
+            icon和文字的距離，所以在class多加上fa，然後在style去調整margin-->
+            <li><a href="#" class="option3"><img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-messaging-96.png" width="25px">Talk!</a></li><!--引導到最後一頁last-->
+            <li><a href="#" class="option4Title""><img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-edvard-munch-96.png" width="25px">Me, Myself & I</a>  <!--考慮要不要全部設為一個option?下拉式本我自我超我345-->
+                <div class="option4">
+                    <ul>
+                        <li><a class="drop1"href="#">真</a>
+                        </li>
+                        <li><a class="drop2"href="#">善</a>
+                        </li>
+                        <li><a class="drop3"href="#">美</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            </ul>
+        </div> 
+        
+    </div>
+
+     <div class="mainBody">
+        <div class="leftFrame"><!--我在左邊喔-->
+            <div class="who"> <!--who底圖-->
+                <img src="imagesMyWebsite/aboutMe/who.jpeg">
+            </div> 
+            <span class="line1"></span>
+        </div>
+
+        <div class="greeting"> About <br>Tzu Hsien Chiang</div>
+
+        <div class="middleFrame">
+            <img src="imagesMyWebsite/aboutMe/name.jpg" width="150px"><img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-frida-kahlo-96.png" class="myName">
+            <img src="/imagesMyWebsite/aboutMe/introduction-1.png" width="300px" class="indroduction1">
+            <div class="blogLink"> <!--插播：這裡是middleFrame自我介紹的部落格連結語法-->
+                <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-blog-2-64 .png .png">
+                <a href="https://tzu0404.pixnet.net/blog">
+                    <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-click-1-98.png">
+                </a>
+
+            </div><!--插播：以上是middleFrame自我介紹的部落格連結語法-->
+
+        </div>
+
+        <!-- <div class="middleFrameContent">
+            <div class="content1">一位將屆二十七歲正在就讀國立政治大學傳播研究所三年級的不聽音樂會死的女孩子，深信這世上若沒有音樂一切生物都會付之一炬，不想當個人主義的魁儡，只想當個能激起餘波盪漾有溫度的人，並且渴望能成為藉由字裡行間、影像及我鍾愛的音樂，將我炙熱如火的溫暖傳遞給他人的人。<br>
+                偶爾寫寫文章，抒發滿腹秋愁；隨時隨地按下快門，捕捉眼前最美的一瞬; 時不時地更新一下部落格，發掘新的獨立音樂，分享己之所愛，翻譯己之鍾情，遠離現實最喧囂的孤獨。不奢望做大事賺大錢，只希望做個有夢相隨不後悔的人。
+            </div>
+        </div> -->
+        <!--字體要怎麼塞進容器裡？-->
+        <div class="middleFrameContent2">
+            <div class="content2">一位甫屆二十七歲正在就讀國立政治大學傳播研究所三年級的不聽音樂會死的女孩子，偶爾寫寫文章，抒發滿腹秋愁；
+                <br>隨時隨地按下快門，捕捉眼前最美的一瞬；
+                <br>時不時地更新一下部落格，發掘新的獨立音樂，分享己之所愛，翻譯己之鍾情，遠離現實最喧囂的孤獨。不奢望做大事賺大錢，只希望做個有夢相隨不後悔的人。
+            </div>
+        </div
+
+       
+        <button class="button1"></button> 
+        <div class="middleFrame2"><!--字跑掉換我影片上場撞擊旁邊的影片--></div>
+        <div class="rightFrame">
+            
+            <div class="photo1"><img src="/imagesMyWebsite/aboutMe/作圖.png" width="800px">
+            </div> <!--UrbanLight-->
+            <!-- <div class="photo2"></div><img src="/practice/myWebsite.html/imagesMyWebsite/aboutMe/inCentralPark.png" width="400px">
+            </div> --><!--centraPark -->
+            <!-- <div class="photo3"><img src="/practice/myWebsite.html/imagesMyWebsite/aboutMe/sparkling.jpeg" width="300px"></div> -->
+            <!-- <div>影片3</div> -->
+            <!-- <div>影片4</div> -->
+
+            <!-- <div class="button1">
+                <div class="fa-3x">
+                     <i class="fas fa-spinner fa-pulse"></i>
+                </div>
+            </div> -->
+        </div>
+        
+    </div> 
+        
+</div>
+
+<!-------------------section2---------------------->
+<!--left-col-->
+<div class="section2" id="section2">
+    <div class="left-col">
+
+        <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/experience.jpg" class="experience">
+
+        <div class="white-bar"></div>
+        <div class="blackGuy-img">
+            <!-- <img src="/practice/myWebsite.html/imagesMyWebsite/aboutMe/ghostHouse.jpeg" width="200px"> -->
+            <img src="/imagesMyWebsite/aboutMe/blackGuy.jpeg" width="200px" class="blackGuy" >
+            <!-- <figcaption>政治不正確</figcaption> -->
+            <!-- <h3>政治不正確</h3>
+            <p>現在不可能，因為太誇張會被撻罰</p> -->
+        </div>
+        
+        <div>
+            <img src="/imagesMyWebsite/aboutMe/aunt2.jpg" width="200px" class="aunt2">
+        </div>
+    
+        <div>
+            <img src="/imagesMyWebsite/aboutMe/study.jpg" width="250px" class="study">
+        </div>
+        <div class="figma2">
+            <img src="/imagesMyWebsite/aboutMe/figma4.png" width="200px">
+        </div>
+
+    </div> 
+  
+
+<!--right-col-->
+    <div class="right-col">
+        
+        <div class="navBar2">
+            <ul>           
+                <li>First Impression</li>
+                <li>Experience</li>
+                <li>Talk!</li>
+                <li>Me, Myself & I</li>
+            </ul>
+        </div>
+        
+        
+
+        <div>
+            <img src="/imagesMyWebsite/aboutMe/brain.jpg" width="350px" class="brain">
+        </div>
+        <div>
+            <img src="/imagesMyWebsite/aboutMe/blog.jpg" width="300px" class="blog">
+        </div>
+
+        <div>
+            <img src="/imagesMyWebsite/aboutMe/semi3.jpg" width="300px" class="semi3">
+        </div>
+
+        <div class="red-bar"><span></span></div>
+        <div class="text-box2">
+            <!-- <h3>助教，參與教育部計畫</h3> -->
+            <!-- <p>擔任推廣</p> -->
+        </div>
+
+    </div>
+ 
+    <!-- <div class="upperFrame2"></div>        
+    <button type="button" class="button2"><a href="#section1"</a>按我回到第一頁</button> -->
+
+</div>
+
+<!-------------------section3---------------------->
+<div class="section3" id="section3">
+    <div class="header">
+        <nav>
+            <a href="" class="logo">Tzu Hsien Chiang</a>
+            <div class="nav-links"> <!--class=logo和class=nave-links一開始是由上到下直向排列-->
+                <ul>
+                    <li><a href=""><img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-clapperboard-96.png" width="25px">First</a></li>
+                    <li><a href=""><img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-browse-folder-1-96.png" width="25px">Experience</a></li>
+                    <li><a href=""><img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-messaging-96.png" width="25px">Talk!</a></li>
+                    <li><a href=""><img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-edvard-munch-96.png" width="25px">Me, Myself & I</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="left-sidebar">
+            <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/contact.jpg" width="80%">
+        </div>
+        <div class="row">
+            <div class="left-col-s3">
+                <img src="/imagesMyWebsite/aboutMe/inYilan.jpeg" "> <!--本來這邊設置width200px，但教學是在上面style把照面設為80%，我比較差別發現設置%縮放比例不會跑掉-->
+            </div>
+            <div class="right-col-s3">
+                <h1>I am Tzu Hsien!</h1>
+                <p>Drop me a line if I can do anything else for you. ☺
+                </p>
+
+                <!--messageBox-->
+                <div class="messageBox">
+                <textarea name="mytext" class="messageBoxText"
+                rows="6"
+                cols="40"
+                required
+                style="background-color: #bcb4e0;">
+            有任何意見歡迎留言☺
+                </textarea>
+                <button class="leaveMessage">Leave me a message</button>
+                </div>
+                <!--messageBox-->
+
+                <div class="social-media"> <!--icon區-->
+                    <div class="icon-s3"> <!--icon區-->
+                        <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-facebook-1-400.png"> <!--FB-->
+                        <a href="https://www.facebook.com/tzuhsien.chiang" alt="Tzu Hsien Chiang" title="Tzu Hsien Chiang"><!--取代FB icon的link圖樣並賦予它超連結屬性-->
+                            <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-external-link-1-400.png">
+                        </a>
+                    </div>
+
+                    <div class="icon-s3">
+                        <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-instagram-100 (2).png">
+                        <a href="https://www.instagram.com/tzuhsien.chiang/" alt="Tzu Hsien Chiang" title="Tzu Hsien Chiang">
+                            <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-external-link-1-400.png">
+                        </a>
+                    </div>
+
+                    <div class="icon-s3">
+                        <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-gmail-logo-1-400.png">
+                        <a href="https://mail.google.com/mail/u/0/?pli=1#inbox" alt="Tzu Hsien Chiang" title="Tzu Hsien Chiang">
+                            <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-external-link-1-400.png">
+                        </a>
+                    </div>
+
+                    <div class="icon-s3">
+                        <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-facebook-messenger-1-400.png">
+                        <a href="https://www.facebook.com/tzuhsien.chiang" alt="Tzu Hsien Chiang" title="Tzu Hsien Chiang">
+                            <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-external-link-1-400.png">
+                        </a>
+                    </div>
+
+                    <div class="icon-s3">
+                        <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-blog-1-64 .png .png">
+                        <a href="https://tzu0404.pixnet.net/blog" alt="Tzu Hsien Chiang" title="Tzu Hsien Chiang">
+                            <img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/link.png">
+                        </a>
+                    </div>
+
+              
+
+
+
+                </div>
+            </div>
+                
+        
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+
+<!--鼠標特效-->
+<img src="/imagesMyWebsite/social-media-logos-lower-third-banner-template/icons8-click-1-98.png" id="icon">
+
+<script type="text/javascript">
+    var icon = document.getElementById('icon');
+    var w = icon.offsetWidth;
+    var h = icon.offsetHeight;
+    document.addEventListener('mousemove',function (e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        icon.style.top = y - ( w / 2 ) + 'px';
+        icon.style.left = x - ( h / 2 ) + 'px';
+    })
+</script>
+
+
+<!-- <div class="section4" id="section4">section4</div>
+<div class="section5" id="section5">section5</div> -->
+
+
+   
+
+</body>
+</html>
